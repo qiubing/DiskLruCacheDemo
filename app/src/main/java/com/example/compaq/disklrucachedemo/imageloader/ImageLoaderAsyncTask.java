@@ -147,10 +147,8 @@ public class ImageLoaderAsyncTask implements ImageLoaderManager.IImageLoader {
             final URL url = new URL(imageUrl);
             urlConnection = (HttpURLConnection) url.openConnection();
             in = urlConnection.getInputStream();
-            //BitmapConfig config = new BitmapConfig(100,100);
-            //final BitmapFactory.Options options = config.getBitmapOptions(in);
-            Bitmap bitmap = decodeSampledBitmapFromStream(in,null);
-            return bitmap;
+            //return ImageUtils.decodeSampledBitmapFromStream(in,240,240);
+            return decodeSampledBitmapFromStream(in,null);
         } catch (IOException e) {
             e.printStackTrace();
         }finally {

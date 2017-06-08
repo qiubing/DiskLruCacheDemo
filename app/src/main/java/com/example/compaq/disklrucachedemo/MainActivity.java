@@ -2,6 +2,7 @@ package com.example.compaq.disklrucachedemo;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ViewTreeObserver;
 import android.widget.AbsListView;
 import android.widget.GridView;
